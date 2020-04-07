@@ -1,13 +1,12 @@
 package cn.wthmox.gateway;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
 
-import feign.RequestLine;
 
-
-@FeignClient("simple-service")
-public interface SayHelloWorld {
+@FeignClient(name="simple-service", path="/simple")
+public interface SayHelloWorld { 
  
-    @RequestLine("GET /simple/hello")
+    @GetMapping("/hello")
     public String hello();
 }
