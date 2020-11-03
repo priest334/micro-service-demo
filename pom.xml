@@ -45,11 +45,6 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<resource>
-		<directory>src/main/resources/${package.environment}</directory>
-		<filtering>true</filtering>
-	</resource>
-
 	<build>
 		<plugins>
 			<plugin>
